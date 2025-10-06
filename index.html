@@ -8,7 +8,6 @@
     html {scroll-behavior: smooth;}
     * {margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
     body {background:#ffffff;color:#333;line-height:1.6}
-
     header {
       display:flex;justify-content:space-between;align-items:center;
       background:#ffffff;padding:20px 30px;position:sticky;top:0;z-index:1000;
@@ -26,7 +25,6 @@
       nav.active{display:flex}
       nav a{padding:8px 0;color:#fff}
     }
-
     .hero {
       position:relative;
       background:url("DPUNlAJV4AEXpi5.jpg") no-repeat center center/cover;
@@ -44,7 +42,6 @@
       text-decoration:none;font-weight:bold;transition:0.3s;
     }
     .hero .btn:hover{background:#434190}
-
     main {padding:40px 20px;max-width:1400px;margin:auto;}
     .laporan{margin-bottom:50px;}
     .laporan-flex{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
@@ -55,73 +52,36 @@
     .laporan-text h2{color:#1e3c72;margin-bottom:10px;}
     .laporan-text p{text-align:justify;line-height:1.6;}
     .button1{background-color:#274472;color:#fff;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;}
-
     @media (max-width:768px){
       .laporan-flex,.laporan-flex.reverse{flex-direction:column;}
     }
-.anggota-section {
-  background:#1e3c72;
-  padding:50px 20px;
-  text-align:center;
-}
-
-.logo-bawah {
-  margin-bottom: 30px;
-}
-
-.members {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap:16px;
-  justify-items:center; 
-}
-
-.member {
-  display: flex;
-  align-items: center;
-  gap:10px;
-  background:#274472;
-  padding:10px 14px;
-  border-radius:40px;
-}
-
-
-.avatar {
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  object-fit:cover;
-}
-
-.info .name {
-  color:#fff;
-  font-weight:600;
-  font-size:0.85rem;
-}
-
-.info .nik {
-  color:#fff;
-  font-size:0.75rem;
-}
-
-@media (max-width:768px) {
-  .members {grid-template-columns:repeat(2,1fr);}
-}
-
-@media (max-width:420px) {
-  .members {grid-template-columns:1fr;}
-  .avatar{width:52px;height:52px;}
-}
-
-
-    footer {
-      background:#1c2f4d;color:#fff;text-align:center;padding:25px 10px;
-      font-size:16px;width:100%;margin:0;position:relative;left:0;
+    .anggota-section {background:#1e3c72;padding:50px 20px;text-align:center;
+    }
+    .logo-bawah {margin-bottom: 30px;
+    }
+    .members {display: grid;grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));gap:16px;justify-items:center; 
+    }
+    .member {display: flex;align-items: center;gap:10px;background:#274472;padding:10px 14px;border-radius:40px;
+    }
+    .avatar {width:64px;height:64px;border-radius:50%;object-fit:cover;
+    }
+    .info .name {color:#fff;font-weight:600;font-size:0.85rem;
+    }
+    .info .nik {color:#fff;font-size:0.75rem;
+    }
+    @media (max-width:768px) {
+      .members {grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width:420px) {
+      .members {grid-template-columns:1fr;}
+      .avatar{width:52px;height:52px;}
+    }
+    footer {background:#1c2f4d;color:#fff;text-align:center;padding:25px 10px;font-size:16px;width:100%;margin:0;position:relative;left:0;
     }
   </style>
 </head>
 <body>
-   <section id="beranda"></section>
+  <section id="beranda"></section>
   <header>
     <div class="logo">
       <img src="logo-upgris-Baru-dark.png" alt="logo">
@@ -130,54 +90,65 @@
     <div class="menu-toggle" id="menu-toggle">☰</div>
     <nav id="nav">
       <a href="#index">Beranda</a>
-      <a href="#kunjunganindustri">Kunjungan Industri</a>
-      <a href="#kunjunganwisata">Kunjungan Wisata</a>
+      <a href="#kunjunganindustri">Industri</a>
+      <a href="#kunjunganwisata">Wisata</a>
       <a href="galeri.html">Galeri</a>
       <a href="#anggota">Anggota</a>
-      <a href="#beranda">Download laporan</a>
+      <a href="#beranda">Laporan</a>
     </nav>
   </header>
 
-   <section id="index"></section>
+  <section id="index"></section>
   <section class="hero">
     <div class="hero-content">
       <h1>Website Laporan Dokumentasi Dan Kegiatan KKL</h1>
       <p>Kuliah Kerja Lapangan Yang Dilakukan Pada Tanggal 9 September Sampai Dengan 13 September 2025 Program Studi Informatika Fakultas Teknik Dan Informatika Universitas PGRI Semarang.</p>
-      <button class="button1">
-  <a href="KKL2.pdf" download style="color:#fff;text-decoration:none;">Download Laporan</a>
-</button>
+      <button class="button1"><a href="LAPORAN KELOMPOK 2 KKL.pdf" download style="color:#fff;text-decoration:none;">Download Laporan</a></button>
     </div>
   </section>
+<main>
+  <section id="galeri-slide" style="position:fixed;top:0;right:-100%;width:100%;height:100%;background:#fff;overflow-y:auto;z-index:2000;transition:0.5s;padding:40px;">
+    <button id="close-galeri" style="position:absolute;top:20px;right:20px;padding:10px 16px;background:#274472;color:#fff;border:none;border-radius:6px;cursor:pointer;">Tutup</button>
+       <div class="laporan-text">
+        <h2>Galeri</h2>
+         <p>Galeri ini berisikan foto-foto yang dambil pada saat pelaksanaan KKL</p><br>
+ <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/WQ_4pQmqHeI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
 
-  <main>
-<section id="galeri-slide" style="position:fixed;top:0;right:-100%;width:100%;height:100%;background:#fff;overflow-y:auto;z-index:2000;transition:0.5s;padding:40px;">
-  <button id="close-galeri" style="position:absolute;top:20px;right:20px;padding:10px 16px;background:#274472;color:#fff;border:none;border-radius:6px;cursor:pointer;">Tutup</button>
-  <h2 style="color:#1e3c72;margin-bottom:20px;">Galeri KKL</h2>
-  
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;">
-  <div><img src="WhatsApp Image 2025-09-15 at 09.51.09 (1).jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 10.16.29 (1).jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 10.16.29.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 10.16.30.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.49.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.22.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.21.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.22 (1).jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.20.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 11.45.15.jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 10.45.23 (2).jpeg" style="width:100%; border-radius:8px;"></div>
-  <div><img src="WhatsApp Image 2025-09-15 at 10.45.23 (1).jpeg" style="width:100%; border-radius:8px;"></div>
-</div>
-</section>
-
-    <section class="laporan" id="laporan1">
-      <div class="laporan-flex">
-        <div class="laporan-img">
-          <img src="WhatsApp Image 2025-09-15 at 11.45.47.jpeg" alt="Gambar laporan 1">
+      
+          <br>
         </div>
-        <div class="laporan-text">
-          <h2>Kuliah Kerja Lapangan</h2>
-          <p>Laporan ini membahas kegiatan Kuliah Kerja Lapangan (KKL) di Balai Diklat Industri Denpasar, 
+    <h2 style="color:#1e3c72;margin-bottom:20px;"></h2><br>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;">
+    <div><img src="WhatsApp Image 2025-09-15 at 10.16.29 (1).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.20.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.21.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.15.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 10.16.29.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.49.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.22 (1).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 10.45.23 (2).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 10.45.23 (1).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 09.51.09 (1).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 11.45.22.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 17.49.50.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 17.49.49.jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="WhatsApp Image 2025-09-15 at 17.49.50 (1).jpeg" style="width:100%; border-radius:8px;"></div>
+    <div><img src="" style="width:100%; border-radius:8px;"></div></div>
+  </section>
+  <section class="laporan" id="laporan1">
+    <div class="laporan-flex">
+    <div class="laporan-img">
+        <img src="WhatsApp Image 2025-09-15 at 11.45.47.jpeg" alt="Gambar laporan 1">
+    </div>
+    <div class="laporan-text">
+        <h2>Kuliah Kerja Lapangan</h2>
+         <p>Laporan ini membahas kegiatan Kuliah Kerja Lapangan (KKL) di Balai Diklat Industri Denpasar, 
             yang bertujuan memperkenalkan mahasiswa pada dunia kerja nyata serta memperdalam pemahaman tentang industri yang dinamis. 
             Di Balai Diklat Industri Denpasar, mahasiswa diberikan pelatihan langsung di bidang industri kreatif, 
             seperti animasi dan kriya, dengan fasilitas modern serta kurikulum yang telah disesuaikan untuk memenuhi tuntutan pasar tenaga kerja. 
@@ -215,7 +186,7 @@
 <section class="laporan" id="laporan3">
   <div class="laporan-flex">
     <div class="laporan-img">
-      <img src="WhatsApp Image 2025-09-15 at 11.45.16.jpeg" alt="Gambar laporan 3">
+      <img src="WhatsApp Image 2025-09-15 at 17.53.52.jpeg" alt="Gambar laporan 3">
     </div>
     <div class="laporan-text">
       <h2>Kunjungan Wisata</h2>
@@ -224,17 +195,17 @@
         Pengunjung dapat melihat dan membeli oleh-oleh khas Bali sekaligus melakukan dokumentasi foto.      <br>  <span class="more-text" style="display:none;">
           <br>
           Perjalanan dilanjutkan ke Pantai Kuta, pantai yang ramai dengan pasir putih lembut dan ombak khasnya, tempat pengunjung dapat menikmati suasana pantai dan aktivitas di sekitarnya. Selanjutnya, kunjungan berlanjut ke Pantai Pandawa, pantai yang lebih tenang dengan pemandangan tebing eksotis, cocok untuk bersantai dan mengambil foto.
-<br><br><img src="WhatsApp Image 2025-09-15 at 10.45.23.jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
+<br><br><img src="WhatsApp Image 2025-09-15 at 17.53.50.jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
 <br>
 Kunjungan berikutnya mengarah ke Dewata, pusat kerajinan dan budaya Bali, di mana berbagai produk kerajinan lokal dapat diamati, sekaligus memberikan kesempatan untuk mempelajari nilai-nilai budaya masyarakat setempat.
 <br><br>
 Salah satu lokasi utama adalah GWK (Garuda Wisnu Kencana). Di sini, pengunjung dapat menyaksikan patung Garuda Wisnu yang megah dan menikmati pertunjukan Tari Kecak, salah satu tarian tradisional Bali yang terkenal.
 <br><br>
-<img src="WhatsApp Image 2025-09-15 at 10.16.29 (1).jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
+<img src="WhatsApp Image 2025-09-15 at 17.53.49.jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
 
 Selanjutnya, perjalanan dilanjutkan ke Candi Kuning Ulun Danu, pura yang terletak di tepi danau, menawarkan pemandangan yang menenangkan dan pengalaman budaya yang khas Bali.
 <br><br>
-<img src="WhatsApp Image 2025-09-15 at 10.45.22.jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
+<img src="WhatsApp Image 2025-09-15 at 17.53.53.jpeg" flex="0 0 45%" width="100%" height="auto"border-radius="8px"display="block">
 Kegiatan wisata diakhiri di Joger, toko oleh-oleh yang terkenal dengan desain kaos kreatifnya, tempat yang pas untuk mengakhiri perjalanan sekaligus membeli cendera mata sebagai kenang-kenangan.       
        </span><br>
       </p>
